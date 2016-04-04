@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  ticketSent: false,
+
   actions: {
     saveTicket(){
       var params = {
@@ -9,6 +11,7 @@ export default Ember.Component.extend({
         issue: this.get('issue'),
         time: Date()
       };
+      this.set('ticketSent', true);
       this.sendAction('saveTicket', params);
       this.set('name', '');
       this.set('location', '');
