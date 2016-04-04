@@ -1,0 +1,19 @@
+<div class="add-form">
+  <form >
+    <div class="form-group">
+      <label for="name"></label>
+      {{input value=name type="text" id="name" placeholder="Please enter your names"}}
+    </div>
+    <div class="form-group">
+      <label for="location"></label>
+      {{input value=location type="text" id="location" placeholder="Please Enter your location"}}
+    </div>
+    <div class="form-group">
+      <label for="issue"></label>
+      {{textarea rows="8" value=issue type="text" id="issue" placeholder="Give a brief description of the issue you are having"}}
+    </div>
+
+    <button {{action 'saveTicket' ticket}} class="btn btn-warning">Help</button>
+  </form>
+
+</div>
