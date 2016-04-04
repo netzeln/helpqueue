@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" {{action 'showDetails'}}>
   <div class="col-md-1">
     <h1>{{ticket.location}}</h1>
   </div>
@@ -9,3 +9,13 @@
     <h1>{{ticket.name}}</h1>
   </div>
 </div>
+
+{{#if areDetailsShowing}}
+  <div class="hiddenTicketDetails">
+    <div class="row" {{action 'hideDetails'}}>
+      <h2>Issue: {{ticket.issue}}</h2>
+    </div>
+
+    <button class="btn btn-warning" {{action 'markAsClosed' ticket}}>Mark as closed</button>
+  </div>
+{{/if}}

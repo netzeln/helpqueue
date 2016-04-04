@@ -1,5 +1,5 @@
 {{#each model as |ticket|}}
- {{#if (filter-closed ticket)}}
-  {{ticket-display ticket=ticket}}
-{{/if}}
+  {{#if (filter-closed ticket)}}
+    {{ticket-display ticket=ticket markAsClosed=markAsClosed}}
+  {{/if}}
 {{/each}}
