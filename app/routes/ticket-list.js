@@ -10,7 +10,7 @@ export default Ember.Route.extend({
     markAsClosed(ticket, params) {
       ticket.set('closed', true);
       ticket.save().then(function(){
-        this.transitionTo('ticket-list');
+        location.reload();
       });
     }
   }
