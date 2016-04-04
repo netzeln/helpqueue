@@ -9,7 +9,8 @@ export default Ember.Component.extend({
         name: this.get('name'),
         location: this.get('location'),
         issue: this.get('issue'),
-        time: Date()
+        time: Date(),
+        closed: false
       };
       this.set('ticketSent', true);
       this.sendAction('saveTicket', params);
