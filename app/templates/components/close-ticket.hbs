@@ -1,0 +1,7 @@
+{{#if ticket.closed}}
+  <h2>Great job!</h2>
+  {{#link-to 'index'}}<button class="btn btn-primary">Home</button>{{/link-to}}
+{{else}}
+  <h2>Help is on the way {{ticket.name}}! Hold tight!</h2>
+  <button class="btn btn-warning" {{action 'closeTicket' ticket}}>Nevermind, We Got it</button>
+{{/if}}
