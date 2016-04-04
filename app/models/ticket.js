@@ -4,6 +4,6 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   location: DS.attr('string'),
   issue: DS.attr('string'),
-  time: DS.attr(),
+  time: DS.attr('number'),
   closed: DS.attr()
 });

@@ -5,11 +5,12 @@ export default Ember.Component.extend({
 
   actions: {
     saveTicket(){
+  
       var params = {
         name: this.get('name'),
         location: this.get('location'),
         issue: this.get('issue'),
-        time: Date(),
+        time: Date.now(),
         closed: false
       };
       this.set('ticketSent', true);
