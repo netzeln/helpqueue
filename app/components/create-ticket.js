@@ -10,6 +10,9 @@ export default Ember.Component.extend({
         time: Date()
       };
       this.sendAction('saveTicket', params);
+      this.set('name', '');
+      this.set('location', '');
+      this.set('issue', '');
     }
   }
 });
